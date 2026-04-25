@@ -1,6 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { useTheme } from "@/components/ThemeProvider";
 import { PerplexityAttribution } from "@/components/PerplexityAttribution";
+import data from "@/data/diabetes-data.json";
 import {
   Sidebar,
   SidebarContent,
@@ -102,7 +103,7 @@ function AppSidebar() {
       </SidebarContent>
       <SidebarFooter className="px-3 pb-3">
         <div className="text-[11px] text-sidebar-foreground/40 leading-tight group-data-[collapsible=icon]:hidden">
-          Data current as of March 2026. Not medical advice.
+          Data current as of {data.lastUpdated}. Not medical advice.
         </div>
       </SidebarFooter>
     </Sidebar>

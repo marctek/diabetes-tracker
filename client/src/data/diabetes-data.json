@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "March 2026",
+  "lastUpdated": "April 2026",
   "insulinProducts": [
     {
       "id": "ins-1",
@@ -1005,11 +1005,11 @@
       "name": "FreeStyle Libre Rio",
       "manufacturer": "Abbott",
       "sensorCostPerUnit": "Pricing not widely published as of March 2026; expected to be similar to Lingo (~$49/sensor)",
-      "monthlyCostNoInsurance": "Estimated ~$89\u2013$99/month based on Lingo pricing (to be confirmed at retail launch)",
+      "monthlyCostNoInsurance": "~$89/month (2 sensors per month); launched alongside Lingo in US pharmacies and online. FSA/HSA eligible.",
       "transmitterCost": "Included in sensor",
       "readerCost": "N/A \u2014 smartphone app",
       "insuranceCopay": "Not covered by prescription insurance (OTC product). FSA/HSA likely eligible.",
-      "insuranceNotes": "OTC product for T2D non-insulin users. Cannot be billed to most insurance.",
+      "insuranceNotes": "No insurance coverage. OTC only. FSA/HSA eligible. For adults 18+ with T2D who do not use insulin.",
       "medicareCovered": false,
       "medicarePartBCopay": "N/A",
       "medicareNotes": "Not covered by Medicare. If T2D patient on insulin needs CGM, they would use prescription Libre 2 Plus or Libre 3 Plus instead.",
@@ -1762,6 +1762,22 @@
   ],
   "recentNews": [
     {
+      "title": "CMS Delays BALANCE Model to 2028; Extends Medicare GLP-1 Bridge Through December 2027",
+      "source": "CMS / KFF",
+      "url": "https://www.kff.org/medicare/what-to-know-about-the-balance-model-for-glp-1s-in-medicare-and-medicaid/",
+      "date": "2026-04-21",
+      "category": "coverage",
+      "summary": "CMS announced the BALANCE (Better Approaches to Lifestyle and Nutrition for Comprehensive hEalth) Model \u2014 originally set to launch January 2027 and provide ongoing Medicare Part D GLP-1 obesity coverage \u2014 will be delayed to 2028. To fill the gap, the Medicare GLP-1 Bridge program (Wegovy/Zepbound at $50/month copay for eligible beneficiaries) was extended through December 31, 2027. Medicaid GLP-1 coverage for obesity remains limited: only 13 states provided coverage as of January 2026, down from 16 states in 2025, reflecting state budget pressures and federal funding cuts."
+    },
+    {
+      "title": "Medtronic MiniMed Go Smart MDI System Receives FDA Clearance \u2014 Combines InPen with Abbott Instinct CGM",
+      "source": "Medtronic / MedTech Dive",
+      "url": "https://news.medtronic.com/2026-01-12-Medtronic-Diabetes-announces-FDA-clearance-for-MiniMed-Go-TM-Smart-MDI-system-featuring-Instinct-sensor-made-by-Abbott",
+      "date": "2026-01-12",
+      "category": "devices",
+      "summary": "Medtronic received FDA 510(k) clearance for the MiniMed Go Smart MDI (Multiple Daily Injection) system \u2014 a connected smart insulin pen system (not a pump) that pairs the InPen smart pen with the Abbott-made Instinct CGM sensor via the MiniMed Go app. The Instinct sensor offers up to 15 days of wear and is the world's smallest and thinnest integrated CGM. The system is cleared for insulin-requiring T1D and T2D patients aged 2 and older. It brings automated dosing decision support to MDI users who are not on a pump."
+    },
+    {
       "title": "Trump Signs MFN Executive Order; Strikes Deals with Lilly and Novo Nordisk \u2014 GLP-1 and Insulin Prices to Drop for Medicare and Medicaid",
       "source": "The White House / CNBC",
       "url": "https://www.whitehouse.gov/fact-sheets/2025/11/fact-sheet-president-donald-j-trump-announces-major-developments-in-bringing-most-favored-nation-pricing-to-american-patients/",
@@ -1783,7 +1799,7 @@
       "url": "https://www.cms.gov/medicare/coverage/prescription-drug-coverage/medicare-glp-1-bridge",
       "date": "2025-12-23",
       "category": "coverage",
-      "summary": "CMS announced the Medicare GLP-1 Bridge, a short-term demonstration program (July\u2013December 2026) providing eligible Medicare Part D beneficiaries access to Wegovy and Zepbound at $50/month copay. Eligibility requires BMI \u226535, or BMI \u226527-30 with qualifying conditions (prediabetes, prior MI, prior stroke, hypertension, CKD, heart failure). The Bridge precedes the BALANCE Model launching January 2027 for ongoing GLP-1 obesity coverage in Medicare Part D. KFF estimates significant transition risk as the Bridge expires."
+      "summary": "CMS announced the Medicare GLP-1 Bridge, a short-term demonstration program (July 2026\u2013December 2027 (extended from original December 2026 end date)) providing eligible Medicare Part D beneficiaries access to Wegovy and Zepbound at $50/month copay. Eligibility requires BMI \u226535, or BMI \u226527-30 with qualifying conditions (prediabetes, prior MI, prior stroke, hypertension, CKD, heart failure). The Bridge precedes the BALANCE Model launching January 2027 for ongoing GLP-1 obesity coverage in Medicare Part D. KFF estimates significant transition risk as the Bridge expires."
     },
     {
       "title": "California Becomes 29th State to Cap Insulin Copays at $35; Launches CalRx State-Branded Biosimilar Insulin",

@@ -1,9 +1,106 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* LIGHT MODE - Warm, accessible healthcare palette */
-/* Teal primary for trust/health, warm neutrals for approachability */
+/* Class-based dark mode (ThemeProvider adds .dark to <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─── Tailwind v4 Theme ───────────────────────────────────────────────────── */
+/* All configuration that was in tailwind.config.ts lives here now.            */
+@theme {
+  /* Border radius */
+  --radius-lg: .5625rem;  /* 9px  */
+  --radius-md: .375rem;   /* 6px  */
+  --radius-sm: .1875rem;  /* 3px  */
+
+  /* Fonts — actual values set in :root below */
+  --font-sans: 'General Sans', 'Inter', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'JetBrains Mono', Menlo, monospace;
+
+  /* Base colors */
+  --color-background:         hsl(var(--background));
+  --color-foreground:         hsl(var(--foreground));
+  --color-border:             hsl(var(--border));
+  --color-input:              hsl(var(--input));
+  --color-ring:               hsl(var(--ring));
+
+  /* Card */
+  --color-card:               hsl(var(--card));
+  --color-card-foreground:    hsl(var(--card-foreground));
+  --color-card-border:        hsl(var(--card-border));
+
+  /* Popover */
+  --color-popover:            hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border:     hsl(var(--popover-border));
+
+  /* Primary */
+  --color-primary:            hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border:     var(--primary-border);
+
+  /* Secondary */
+  --color-secondary:            hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border:     var(--secondary-border);
+
+  /* Muted */
+  --color-muted:            hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border:     var(--muted-border);
+
+  /* Accent */
+  --color-accent:            hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border:     var(--accent-border);
+
+  /* Destructive */
+  --color-destructive:            hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border:     var(--destructive-border);
+
+  /* Charts */
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  /* Sidebar */
+  --color-sidebar:            hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-border:     hsl(var(--sidebar-border));
+  --color-sidebar-ring:       hsl(var(--sidebar-ring));
+
+  --color-sidebar-primary:            hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-primary-border:     var(--sidebar-primary-border);
+
+  --color-sidebar-accent:            hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-accent-border:     var(--sidebar-accent-border);
+
+  /* Status indicators */
+  --color-status-online:  rgb(34 197 94);
+  --color-status-away:    rgb(245 158 11);
+  --color-status-busy:    rgb(239 68 68);
+  --color-status-offline: rgb(156 163 175);
+
+  /* Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up:   accordion-up   0.2s ease-out;
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to   { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to   { height: 0; }
+}
+
+/* ─── Design Tokens ───────────────────────────────────────────────────────── */
+/* LIGHT MODE — Warm, accessible healthcare palette                            */
 :root {
   --button-outline: rgba(0,0,0, .10);
   --badge-outline: rgba(0,0,0, .05);
@@ -44,9 +141,6 @@
   --chart-3: 262 50% 55%;
   --chart-4: 43 74% 49%;
   --chart-5: 340 60% 50%;
-  --font-sans: 'General Sans', 'Inter', sans-serif;
-  --font-serif: Georgia, serif;
-  --font-mono: 'JetBrains Mono', Menlo, monospace;
   --radius: .5rem;
   --shadow-2xs: 0px 1px 0px 0px hsl(40 10% 50% / 0.03);
   --shadow-xs: 0px 1px 2px 0px hsl(40 10% 50% / 0.05);
@@ -75,6 +169,7 @@
   --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
 }
 
+/* DARK MODE */
 .dark {
   --button-outline: rgba(255,255,255, .10);
   --badge-outline: rgba(255,255,255, .05);
@@ -140,6 +235,7 @@
   --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
 }
 
+/* ─── Base Layer ──────────────────────────────────────────────────────────── */
 @layer base {
   * {
     @apply border-border;
@@ -150,6 +246,7 @@
   }
 }
 
+/* ─── Utility Layer ───────────────────────────────────────────────────────── */
 @layer utilities {
   input[type="search"]::-webkit-search-cancel-button {
     @apply hidden;
