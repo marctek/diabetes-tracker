@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run build:server"",
+    "build": "vite build && npm run build:server",
     "preview": "vite preview",
     "check": "tsc",
     "build:server": "tsx script/build.ts",
