@@ -12,6 +12,13 @@ declare module "http" {
   }
 }
 
+// Log every incoming request before any other middleware runs so we can
+// confirm requests are reaching the app and identify where crashes occur.
+app.use((req, _res, next) => {
+  console.log(`[request] ${req.method} ${req.url} — headers: ${JSON.stringify(req.headers)}`);
+  next();
+});
+
 app.use(
   express.json({
     verify: (req, _res, buf) => {
@@ -98,13 +105,19 @@ process.on("unhandledRejection", (reason) => {
       await setupVite(httpServer, app);
     }
 
+    // Catch-all 404 handler — logs any request that fell through all routes.
+    app.use((req: Request, res: Response) => {
+      console.log(`[404] No route matched: ${req.method} ${req.url}`);
+      res.status(404).json({ message: "Not Found" });
+    });
+
     // Error handler must be registered last so it catches errors from all
     // middleware registered above, including the static file serving layer.
-    app.use((err: any, _req: Request, res: Response, next: NextFunction) => {
+    app.use((err: any, req: Request, res: Response, next: NextFunction) => {
       const status = err.status || err.statusCode || 500;
       const message = err.message || "Internal Server Error";
 
-      console.error("Internal Server Error:", err);
+      console.error(`[error] ${req.method} ${req.url} — status ${status}:`, err);
 
       if (res.headersSent) {
         return next(err);
@@ -121,6 +134,7 @@ process.on("unhandledRejection", (reason) => {
     const host = process.env.HOST || "127.0.0.1";
     httpServer.listen(port, host, () => {
       log(`serving on port ${port}`);
+      console.log(`[startup] HTTP server listening on ${host}:${port} (NODE_ENV=${process.env.NODE_ENV})`);
     });
   } catch (err) {
     console.error("Fatal error during server initialization:", err);
