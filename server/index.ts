@@ -73,6 +73,33 @@ process.on("unhandledRejection", (reason) => {
   try {
     await registerRoutes(httpServer, app);
 
+    // Wrap subsequent middleware so that synchronous throws are caught and
+    // forwarded to the Express error handler instead of crashing the process.
+    app.use((req: Request, res: Response, next: NextFunction) => {
+      try {
+        next();
+      } catch (err) {
+        next(err);
+      }
+    });
+
+    // importantly only setup vite in development and after
+    // setting up all the other routes so the catch-all route
+    // doesn't interfere with the other routes
+    if (process.env.NODE_ENV === "production") {
+      try {
+        serveStatic(app);
+      } catch (err) {
+        console.error("Failed to initialise static file serving:", err);
+        process.exit(1);
+      }
+    } else {
+      const { setupVite } = await import("./vite");
+      await setupVite(httpServer, app);
+    }
+
+    // Error handler must be registered last so it catches errors from all
+    // middleware registered above, including the static file serving layer.
     app.use((err: any, _req: Request, res: Response, next: NextFunction) => {
       const status = err.status || err.statusCode || 500;
       const message = err.message || "Internal Server Error";
@@ -85,16 +112,6 @@ process.on("unhandledRejection", (reason) => {
 
       return res.status(status).json({ message });
     });
-
-    // importantly only setup vite in development and after
-    // setting up all the other routes so the catch-all route
-    // doesn't interfere with the other routes
-    if (process.env.NODE_ENV === "production") {
-      serveStatic(app);
-    } else {
-      const { setupVite } = await import("./vite");
-      await setupVite(httpServer, app);
-    }
 
     // ALWAYS serve the app on the port specified in the environment variable PORT
     // Other ports are firewalled. Default to 5000 if not specified.
