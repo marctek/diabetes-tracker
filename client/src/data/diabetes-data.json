@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "March 2026",
+  "lastUpdated": "May 2026",
   "insulinProducts": [
     {
       "id": "ins-1",
@@ -1004,7 +1004,7 @@
       "id": "cgm-10",
       "name": "FreeStyle Libre Rio",
       "manufacturer": "Abbott",
-      "sensorCostPerUnit": "Pricing not widely published as of March 2026; expected to be similar to Lingo (~$49/sensor)",
+      "sensorCostPerUnit": "Pricing not widely published as of May 2026; expected to be similar to Lingo (~$49/sensor)",
       "monthlyCostNoInsurance": "Estimated ~$89\u2013$99/month based on Lingo pricing (to be confirmed at retail launch)",
       "transmitterCost": "Included in sensor",
       "readerCost": "N/A \u2014 smartphone app",
@@ -1547,7 +1547,7 @@
       "firstYearCostNoInsurance": "~$1,024 + monthly refill costs (not publicly disclosed)",
       "insurancePumpCopay": "$0 first month",
       "insuranceMonthlyCopay": "$0\u2013$50/month",
-      "insuranceNotes": "Most commercially insured patients pay $0 for the first month and no more than $50/month for Refill Kits. Covered under pharmacy benefit. No long-term contract. Users with an existing in-warranty pump can switch to twiist without waiting for warranty expiration. Broad national availability as of March 2026.",
+      "insuranceNotes": "Most commercially insured patients pay $0 for the first month and no more than $50/month for Refill Kits. Covered under pharmacy benefit. No long-term contract. Users with an existing in-warranty pump can switch to twiist without waiting for warranty expiration. Broad national availability as of May 2026.",
       "medicareCovered": "Partial/In Progress",
       "medicarePumpCost": "TBD",
       "medicareMonthlySupply": "TBD",
@@ -1568,7 +1568,7 @@
         "300-unit cassette capacity",
         "Ages 6+ with Type 1 diabetes",
         "No contract lock-in\u2014users can switch without warranty penalty",
-        "Nationally available as of March 2026",
+        "Nationally available as of May 2026",
         "$0 first month / \u2264$50/month with commercial insurance"
       ],
       "sourceUrls": [

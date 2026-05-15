@@ -1,6 +1,5 @@
 import { Link, useLocation } from "wouter";
 import { useTheme } from "@/components/ThemeProvider";
-import { PerplexityAttribution } from "@/components/PerplexityAttribution";
 import {
   Sidebar,
   SidebarContent,
@@ -102,7 +101,7 @@ function AppSidebar() {
       </SidebarContent>
       <SidebarFooter className="px-3 pb-3">
         <div className="text-[11px] text-sidebar-foreground/40 leading-tight group-data-[collapsible=icon]:hidden">
-          Data current as of March 2026. Not medical advice.
+          Data current as of May 2026. Not medical advice.
         </div>
       </SidebarFooter>
     </Sidebar>
@@ -143,7 +142,6 @@ export default function Layout({ children }: { children: ReactNode }) {
             <div className="max-w-[1400px] mx-auto p-4 md:p-6">
               {children}
             </div>
-            <PerplexityAttribution />
           </main>
         </div>
       </div>
