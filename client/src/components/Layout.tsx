@@ -1,4 +1,4 @@
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
 import { useTheme } from "@/components/ThemeProvider";
 import {
   Sidebar,
@@ -64,7 +64,7 @@ function AppLogo({ collapsed }: { collapsed?: boolean }) {
 }
 
 function AppSidebar() {
-  const [location] = useLocation();
+  const [location, navigate] = useLocation();
 
   return (
     <Sidebar collapsible="icon" data-testid="sidebar-nav">
@@ -83,14 +83,13 @@ function AppSidebar() {
                 return (
                   <SidebarMenuItem key={item.href}>
                     <SidebarMenuButton
-                      asChild
                       isActive={isActive}
                       tooltip={item.title}
+                      onClick={() => navigate(item.href)}
+                      data-testid={`nav-${item.title.toLowerCase()}`}
                     >
-                      <Link href={item.href} data-testid={`nav-${item.title.toLowerCase()}`}>
-                        <item.icon className="size-4" />
-                        <span>{item.title}</span>
-                      </Link>
+                      <item.icon className="size-4" />
+                      <span>{item.title}</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 );

@@ -32,65 +32,73 @@ export default function Dashboard() {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-        <Card data-testid="card-kpi-insulin-count">
-          <CardContent className="p-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Insulin Products</p>
-                <p className="text-2xl font-bold mt-1">{insulinCount}</p>
-                <p className="text-xs text-muted-foreground mt-0.5">brands & generics tracked</p>
+        <Link href="/insulin">
+          <Card className="cursor-pointer hover:border-primary/30 transition-colors" data-testid="card-kpi-insulin-count">
+            <CardContent className="p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Insulin Products</p>
+                  <p className="text-2xl font-bold mt-1">{insulinCount}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">brands & generics tracked</p>
+                </div>
+                <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <Syringe className="size-5 text-primary" />
+                </div>
               </div>
-              <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Syringe className="size-5 text-primary" />
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </Link>
 
-        <Card data-testid="card-kpi-price-range">
-          <CardContent className="p-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Avg Retail Range</p>
-                <p className="text-2xl font-bold mt-1">$25–$275</p>
-                <p className="text-xs text-muted-foreground mt-0.5">per vial (post-2023 cuts)</p>
+        <Link href="/insulin">
+          <Card className="cursor-pointer hover:border-primary/30 transition-colors" data-testid="card-kpi-price-range">
+            <CardContent className="p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Avg Retail Range</p>
+                  <p className="text-2xl font-bold mt-1">$25–$275</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">per vial (post-2023 cuts)</p>
+                </div>
+                <div className="size-10 rounded-lg bg-chart-2/10 flex items-center justify-center">
+                  <DollarSign className="size-5 text-chart-2" />
+                </div>
               </div>
-              <div className="size-10 rounded-lg bg-chart-2/10 flex items-center justify-center">
-                <DollarSign className="size-5 text-chart-2" />
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </Link>
 
-        <Card data-testid="card-kpi-medicare-cap">
-          <CardContent className="p-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Medicare $35 Cap</p>
-                <p className="text-2xl font-bold mt-1">{ira35Products}/{insulinCount}</p>
-                <p className="text-xs text-muted-foreground mt-0.5">insulin products covered</p>
+        <Link href="/insulin">
+          <Card className="cursor-pointer hover:border-primary/30 transition-colors" data-testid="card-kpi-medicare-cap">
+            <CardContent className="p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Medicare $35 Cap</p>
+                  <p className="text-2xl font-bold mt-1">{ira35Products}/{insulinCount}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">insulin products covered</p>
+                </div>
+                <div className="size-10 rounded-lg bg-green-500/10 flex items-center justify-center">
+                  <ShieldCheck className="size-5 text-green-600 dark:text-green-400" />
+                </div>
               </div>
-              <div className="size-10 rounded-lg bg-green-500/10 flex items-center justify-center">
-                <ShieldCheck className="size-5 text-green-600 dark:text-green-400" />
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </Link>
 
-        <Card data-testid="card-kpi-manufacturers">
-          <CardContent className="p-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Manufacturers</p>
-                <p className="text-2xl font-bold mt-1">{manufacturers.size}</p>
-                <p className="text-xs text-muted-foreground mt-0.5">across all categories</p>
+        <Link href="/compare">
+          <Card className="cursor-pointer hover:border-primary/30 transition-colors" data-testid="card-kpi-manufacturers">
+            <CardContent className="p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Manufacturers</p>
+                  <p className="text-2xl font-bold mt-1">{manufacturers.size}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">across all categories</p>
+                </div>
+                <div className="size-10 rounded-lg bg-chart-3/10 flex items-center justify-center">
+                  <Factory className="size-5 text-chart-3" />
+                </div>
               </div>
-              <div className="size-10 rounded-lg bg-chart-3/10 flex items-center justify-center">
-                <Factory className="size-5 text-chart-3" />
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </Link>
       </div>
 
       {/* Category Summary Cards */}
