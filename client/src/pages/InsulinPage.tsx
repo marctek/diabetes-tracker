@@ -11,20 +11,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { ChevronDown, Search, ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const typeColors: Record<string, string> = {
   "rapid-acting": "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
@@ -155,164 +146,119 @@ export default function InsulinPage() {
         </CardContent>
       </Card>
 
-      {/* Table */}
-      <Card>
-        <div className="overflow-x-auto">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="w-8" />
-                <SortHeader col="brandName">Brand</SortHeader>
-                <SortHeader col="genericName">Generic Name</SortHeader>
-                <SortHeader col="manufacturer">Manufacturer</SortHeader>
-                <SortHeader col="type">Type</SortHeader>
-                <TableHead className="text-xs whitespace-nowrap">Retail (Vial)</TableHead>
-                <TableHead className="text-xs whitespace-nowrap">Retail (Pen)</TableHead>
-                <TableHead className="text-xs whitespace-nowrap">Insurance Copay</TableHead>
-                <TableHead className="text-xs whitespace-nowrap">Medicare Copay</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {filtered.map((product) => (
-                <Collapsible
-                  key={product.id}
-                  open={expandedId === product.id}
-                  onOpenChange={(open) =>
-                    setExpandedId(open ? product.id : null)
-                  }
-                  asChild
-                >
-                  <>
-                    <CollapsibleTrigger asChild>
-                      <TableRow
-                        className="cursor-pointer hover:bg-muted/50"
-                        data-testid={`row-insulin-${product.id}`}
+      {/* Card List */}
+      <div className="space-y-2">
+        {filtered.map((product) => (
+          <Collapsible
+            key={product.id}
+            open={expandedId === product.id}
+            onOpenChange={(open) => setExpandedId(open ? product.id : null)}
+          >
+            <Card data-testid={`row-insulin-${product.id}`}>
+              <CollapsibleTrigger asChild>
+                <button className="w-full text-left p-4 flex items-start gap-3 hover:bg-muted/30 transition-colors rounded-xl">
+                  <ChevronDown
+                    className={`size-4 text-muted-foreground mt-0.5 shrink-0 transition-transform ${
+                      expandedId === product.id ? "rotate-180" : ""
+                    }`}
+                  />
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="font-semibold text-sm">{product.brandName}</span>
+                      <Badge
+                        variant="secondary"
+                        className={`text-[11px] font-normal ${typeColors[product.type] || ""}`}
                       >
-                        <TableCell className="w-8 pr-0">
-                          <ChevronDown
-                            className={`size-3.5 text-muted-foreground transition-transform ${
-                              expandedId === product.id ? "rotate-180" : ""
-                            }`}
-                          />
-                        </TableCell>
-                        <TableCell className="font-medium text-sm whitespace-nowrap">
-                          {product.brandName.length > 30
-                            ? product.brandName.slice(0, 30) + "…"
-                            : product.brandName}
-                        </TableCell>
-                        <TableCell className="text-sm text-muted-foreground max-w-[200px] truncate">
-                          {product.genericName}
-                        </TableCell>
-                        <TableCell className="text-sm whitespace-nowrap">
-                          {product.manufacturer.length > 20
-                            ? product.manufacturer.split(" ")[0] + (product.manufacturer.split(" ").length > 1 ? "…" : "")
-                            : product.manufacturer}
-                        </TableCell>
-                        <TableCell>
-                          <Badge
-                            variant="secondary"
-                            className={`text-[11px] font-normal ${typeColors[product.type] || ""}`}
-                          >
-                            {product.type}
-                          </Badge>
-                        </TableCell>
-                        <TableCell className="text-sm whitespace-nowrap">
-                          {product.retailPriceVial.split("(")[0].trim().slice(0, 20)}
-                        </TableCell>
-                        <TableCell className="text-sm whitespace-nowrap">
-                          {product.retailPricePen.split("(")[0].trim().slice(0, 20)}
-                        </TableCell>
-                        <TableCell className="text-sm whitespace-nowrap">
-                          {product.insuranceCopay.slice(0, 25)}
-                        </TableCell>
-                        <TableCell className="text-sm whitespace-nowrap">
-                          {product.medicareCopay.slice(0, 25)}
-                        </TableCell>
-                      </TableRow>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent asChild>
-                      <TableRow className="bg-muted/30 hover:bg-muted/30">
-                        <TableCell colSpan={9} className="p-4">
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                            <div className="space-y-2">
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">Retail Notes</span>
-                                <p className="mt-0.5 text-muted-foreground text-[13px] leading-relaxed">{product.retailNotes}</p>
-                              </div>
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">Insurance Notes</span>
-                                <p className="mt-0.5 text-muted-foreground text-[13px] leading-relaxed">{product.insuranceNotes}</p>
-                              </div>
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">Medicare Notes</span>
-                                <p className="mt-0.5 text-muted-foreground text-[13px] leading-relaxed">{product.medicareNotes}</p>
-                              </div>
-                            </div>
-                            <div className="space-y-2">
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">Patient Assistance</span>
-                                <p className="mt-0.5 text-muted-foreground text-[13px] leading-relaxed">{product.patientAssistance}</p>
-                              </div>
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">Forms Available</span>
-                                <div className="flex flex-wrap gap-1 mt-1">
-                                  {product.forms.map((f) => (
-                                    <Badge key={f} variant="outline" className="text-[11px] font-normal">
-                                      {f}
-                                    </Badge>
-                                  ))}
-                                </div>
-                              </div>
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">IRA $35 Cap</span>
-                                <p className="mt-0.5">
-                                  {product.ira35Cap ? (
-                                    <Badge className="bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300 text-[11px] font-normal">
-                                      ✓ Eligible
-                                    </Badge>
-                                  ) : (
-                                    <Badge variant="secondary" className="text-[11px] font-normal">Not applicable</Badge>
-                                  )}
-                                </p>
-                              </div>
-                              {product.sourceUrls.length > 0 && (
-                                <div>
-                                  <span className="font-medium text-xs uppercase text-muted-foreground">Sources</span>
-                                  <div className="flex flex-col gap-0.5 mt-1">
-                                    {product.sourceUrls.map((url, i) => (
-                                      <a
-                                        key={i}
-                                        href={url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1 text-xs text-primary hover:underline truncate max-w-sm"
-                                      >
-                                        <ExternalLink className="size-3 shrink-0" />
-                                        {new URL(url).hostname.replace("www.", "")}
-                                      </a>
-                                    ))}
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                          </div>
-                        </TableCell>
-                      </TableRow>
-                    </CollapsibleContent>
-                  </>
-                </Collapsible>
-              ))}
-              {filtered.length === 0 && (
-                <TableRow>
-                  <TableCell colSpan={9} className="text-center py-8 text-muted-foreground">
-                    No insulin products match your filters.
-                  </TableCell>
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
-        </div>
-      </Card>
+                        {product.type}
+                      </Badge>
+                      {product.ira35Cap && (
+                        <Badge className="text-[11px] font-normal bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300">
+                          ✓ $35 Cap
+                        </Badge>
+                      )}
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-0.5">{product.genericName} · {product.manufacturer}</p>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-1 mt-2">
+                      <div>
+                        <span className="text-[11px] text-muted-foreground uppercase tracking-wide">Retail/Vial</span>
+                        <p className="text-sm font-medium">{product.retailPriceVial.split("(")[0].trim()}</p>
+                      </div>
+                      <div>
+                        <span className="text-[11px] text-muted-foreground uppercase tracking-wide">Retail/Pen</span>
+                        <p className="text-sm font-medium">{product.retailPricePen.split("(")[0].trim()}</p>
+                      </div>
+                      <div>
+                        <span className="text-[11px] text-muted-foreground uppercase tracking-wide">Insurance</span>
+                        <p className="text-sm font-medium">{product.insuranceCopay}</p>
+                      </div>
+                      <div>
+                        <span className="text-[11px] text-muted-foreground uppercase tracking-wide">Medicare</span>
+                        <p className="text-sm font-medium">{product.medicareCopay}</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <div className="px-4 pb-4 pt-0 border-t border-border/50 mt-0">
+                  <div className="grid grid-cols-1 gap-3 mt-3 text-sm">
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">Retail Notes</span>
+                      <p className="mt-0.5 text-muted-foreground text-[13px] leading-relaxed">{product.retailNotes}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">Insurance Notes</span>
+                      <p className="mt-0.5 text-muted-foreground text-[13px] leading-relaxed">{product.insuranceNotes}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">Medicare Notes</span>
+                      <p className="mt-0.5 text-muted-foreground text-[13px] leading-relaxed">{product.medicareNotes}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">Patient Assistance</span>
+                      <p className="mt-0.5 text-muted-foreground text-[13px] leading-relaxed">{product.patientAssistance}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">Forms Available</span>
+                      <div className="flex flex-wrap gap-1 mt-1">
+                        {product.forms.map((f) => (
+                          <Badge key={f} variant="outline" className="text-[11px] font-normal">{f}</Badge>
+                        ))}
+                      </div>
+                    </div>
+                    {product.sourceUrls.length > 0 && (
+                      <div>
+                        <span className="font-medium text-xs uppercase text-muted-foreground">Sources</span>
+                        <div className="flex flex-col gap-0.5 mt-1">
+                          {product.sourceUrls.map((url, i) => (
+                            <a
+                              key={i}
+                              href={url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-xs text-primary hover:underline"
+                            >
+                              <ExternalLink className="size-3 shrink-0" />
+                              {new URL(url).hostname.replace("www.", "")}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </CollapsibleContent>
+            </Card>
+          </Collapsible>
+        ))}
+        {filtered.length === 0 && (
+          <Card>
+            <CardContent className="text-center py-8 text-muted-foreground">
+              No insulin products match your filters.
+            </CardContent>
+          </Card>
+        )}
+      </div>
 
       <p className="text-xs text-muted-foreground">
         Showing {filtered.length} of {data.insulinProducts.length} products · Click a row to expand details

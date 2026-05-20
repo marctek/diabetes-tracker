@@ -11,19 +11,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { ChevronDown, Search, ExternalLink, Check, X } from "lucide-react";
+import { ChevronDown, Search, ExternalLink } from "lucide-react";
 
 export default function PumpsPage() {
   const [search, setSearch] = useState("");
@@ -71,30 +63,6 @@ export default function PumpsPage() {
 
     return products;
   }, [search, mfrFilter, clFilter, tlFilter, sortCol, sortAsc]);
-
-  function toggleSort(col: string) {
-    if (sortCol === col) setSortAsc(!sortAsc);
-    else { setSortCol(col); setSortAsc(true); }
-  }
-
-  function SortHeader({ col, children }: { col: string; children: React.ReactNode }) {
-    return (
-      <TableHead className="cursor-pointer select-none whitespace-nowrap text-xs hover:text-foreground" onClick={() => toggleSort(col)}>
-        <span className="inline-flex items-center gap-1">
-          {children}
-          {sortCol === col && <span className="text-[10px]">{sortAsc ? "↑" : "↓"}</span>}
-        </span>
-      </TableHead>
-    );
-  }
-
-  function BoolCell({ value }: { value: boolean }) {
-    return value ? (
-      <Check className="size-4 text-green-600 dark:text-green-400" />
-    ) : (
-      <X className="size-4 text-muted-foreground/40" />
-    );
-  }
 
   return (
     <div className="space-y-4" data-testid="page-pumps">
@@ -147,138 +115,137 @@ export default function PumpsPage() {
         </CardContent>
       </Card>
 
-      {/* Table */}
-      <Card>
-        <div className="overflow-x-auto">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="w-8" />
-                <SortHeader col="name">Name</SortHeader>
-                <SortHeader col="manufacturer">Manufacturer</SortHeader>
-                <TableHead className="text-xs whitespace-nowrap">Pump Cost</TableHead>
-                <TableHead className="text-xs whitespace-nowrap">Monthly Supplies</TableHead>
-                <TableHead className="text-xs whitespace-nowrap">Insurance Cost</TableHead>
-                <SortHeader col="medicareCovered">Medicare</SortHeader>
-                <SortHeader col="closedLoop">Closed Loop</SortHeader>
-                <SortHeader col="tubeless">Tubeless</SortHeader>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {filtered.map((product) => (
-                <Collapsible
-                  key={product.id}
-                  open={expandedId === product.id}
-                  onOpenChange={(open) => setExpandedId(open ? product.id : null)}
-                  asChild
-                >
-                  <>
-                    <CollapsibleTrigger asChild>
-                      <TableRow className="cursor-pointer hover:bg-muted/50" data-testid={`row-pump-${product.id}`}>
-                        <TableCell className="w-8 pr-0">
-                          <ChevronDown className={`size-3.5 text-muted-foreground transition-transform ${expandedId === product.id ? "rotate-180" : ""}`} />
-                        </TableCell>
-                        <TableCell className="font-medium text-sm whitespace-nowrap">
-                          {product.name.length > 30 ? product.name.slice(0, 30) + "…" : product.name}
-                        </TableCell>
-                        <TableCell className="text-sm whitespace-nowrap">
-                          {product.manufacturer.split(" ")[0]}{product.manufacturer.includes("(") ? "" : ""}
-                        </TableCell>
-                        <TableCell className="text-sm">{product.pumpCost.slice(0, 25)}</TableCell>
-                        <TableCell className="text-sm">{product.monthlySupplyCost.slice(0, 25)}</TableCell>
-                        <TableCell className="text-sm max-w-[150px] truncate">{product.insurancePumpCopay.slice(0, 30)}</TableCell>
-                        <TableCell><BoolCell value={product.medicareCovered} /></TableCell>
-                        <TableCell><BoolCell value={product.closedLoop} /></TableCell>
-                        <TableCell><BoolCell value={product.tubeless} /></TableCell>
-                      </TableRow>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent asChild>
-                      <TableRow className="bg-muted/30 hover:bg-muted/30">
-                        <TableCell colSpan={9} className="p-4">
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                            <div className="space-y-2">
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">First Year Cost (No Insurance)</span>
-                                <p className="mt-0.5 text-muted-foreground text-[13px]">{product.firstYearCostNoInsurance}</p>
-                              </div>
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">Insurance Monthly Copay</span>
-                                <p className="mt-0.5 text-muted-foreground text-[13px]">{product.insuranceMonthlyCopay}</p>
-                              </div>
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">Insurance Notes</span>
-                                <p className="mt-0.5 text-muted-foreground text-[13px] leading-relaxed">{product.insuranceNotes}</p>
-                              </div>
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">Warranty</span>
-                                <p className="mt-0.5 text-muted-foreground text-[13px]">{product.warrantyYears} years</p>
-                              </div>
-                            </div>
-                            <div className="space-y-2">
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">Medicare Pump Cost</span>
-                                <p className="mt-0.5 text-muted-foreground text-[13px]">{product.medicarePumpCost}</p>
-                              </div>
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">Medicare Monthly Supply</span>
-                                <p className="mt-0.5 text-muted-foreground text-[13px]">{product.medicareMonthlySupply}</p>
-                              </div>
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">Medicare Notes</span>
-                                <p className="mt-0.5 text-muted-foreground text-[13px] leading-relaxed">{product.medicareNotes}</p>
-                              </div>
-                              <div>
-                                <span className="font-medium text-xs uppercase text-muted-foreground">CGM Integration</span>
-                                <p className="mt-0.5 text-muted-foreground text-[13px]">{product.cgmIntegration}</p>
-                              </div>
-                              {product.features.length > 0 && (
-                                <div>
-                                  <span className="font-medium text-xs uppercase text-muted-foreground">Features</span>
-                                  <ul className="mt-1 space-y-0.5">
-                                    {product.features.slice(0, 5).map((f, i) => (
-                                      <li key={i} className="text-[13px] text-muted-foreground flex items-start gap-1.5">
-                                        <span className="text-primary mt-1">•</span>
-                                        <span>{f}</span>
-                                      </li>
-                                    ))}
-                                    {product.features.length > 5 && (
-                                      <li className="text-[12px] text-muted-foreground/60">+{product.features.length - 5} more</li>
-                                    )}
-                                  </ul>
-                                </div>
-                              )}
-                              {product.sourceUrls.length > 0 && (
-                                <div>
-                                  <span className="font-medium text-xs uppercase text-muted-foreground">Sources</span>
-                                  <div className="flex flex-col gap-0.5 mt-1">
-                                    {product.sourceUrls.map((url, i) => (
-                                      <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline truncate max-w-sm">
-                                        <ExternalLink className="size-3 shrink-0" />
-                                        {new URL(url).hostname.replace("www.", "")}
-                                      </a>
-                                    ))}
-                                  </div>
-                                </div>
-                              )}
-                            </div>
-                          </div>
-                        </TableCell>
-                      </TableRow>
-                    </CollapsibleContent>
-                  </>
-                </Collapsible>
-              ))}
-              {filtered.length === 0 && (
-                <TableRow>
-                  <TableCell colSpan={9} className="text-center py-8 text-muted-foreground">
-                    No pumps match your filters.
-                  </TableCell>
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
-        </div>
-      </Card>
+      {/* Card List */}
+      <div className="space-y-2">
+        {filtered.map((product) => (
+          <Collapsible
+            key={product.id}
+            open={expandedId === product.id}
+            onOpenChange={(open) => setExpandedId(open ? product.id : null)}
+          >
+            <Card data-testid={`row-pump-${product.id}`}>
+              <CollapsibleTrigger asChild>
+                <button className="w-full text-left p-4 flex items-start gap-3 hover:bg-muted/30 transition-colors rounded-xl">
+                  <ChevronDown
+                    className={`size-4 text-muted-foreground mt-0.5 shrink-0 transition-transform ${
+                      expandedId === product.id ? "rotate-180" : ""
+                    }`}
+                  />
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="font-semibold text-sm">{product.name}</span>
+                      {product.closedLoop && (
+                        <Badge className="text-[11px] font-normal bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300">
+                          Closed-Loop
+                        </Badge>
+                      )}
+                      {product.tubeless && (
+                        <Badge className="text-[11px] font-normal bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">
+                          Tubeless
+                        </Badge>
+                      )}
+                      {product.medicareCovered && (
+                        <Badge className="text-[11px] font-normal bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300">
+                          Medicare ✓
+                        </Badge>
+                      )}
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-0.5">{product.manufacturer}</p>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-1 mt-2">
+                      <div>
+                        <span className="text-[11px] text-muted-foreground uppercase tracking-wide">Pump Cost</span>
+                        <p className="text-sm font-medium">{product.pumpCost}</p>
+                      </div>
+                      <div>
+                        <span className="text-[11px] text-muted-foreground uppercase tracking-wide">Monthly Supplies</span>
+                        <p className="text-sm font-medium">{product.monthlySupplyCost}</p>
+                      </div>
+                      <div className="col-span-2">
+                        <span className="text-[11px] text-muted-foreground uppercase tracking-wide">Insurance</span>
+                        <p className="text-sm font-medium">{product.insurancePumpCopay}</p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <div className="px-4 pb-4 pt-0 border-t border-border/50">
+                  <div className="grid grid-cols-1 gap-3 mt-3 text-sm">
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">First Year Cost (No Insurance)</span>
+                      <p className="mt-0.5 text-muted-foreground text-[13px]">{product.firstYearCostNoInsurance}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">Insurance Monthly Copay</span>
+                      <p className="mt-0.5 text-muted-foreground text-[13px]">{product.insuranceMonthlyCopay}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">Insurance Notes</span>
+                      <p className="mt-0.5 text-muted-foreground text-[13px] leading-relaxed">{product.insuranceNotes}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">Medicare Pump Cost</span>
+                      <p className="mt-0.5 text-muted-foreground text-[13px]">{product.medicarePumpCost}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">Medicare Monthly Supply</span>
+                      <p className="mt-0.5 text-muted-foreground text-[13px]">{product.medicareMonthlySupply}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">Medicare Notes</span>
+                      <p className="mt-0.5 text-muted-foreground text-[13px] leading-relaxed">{product.medicareNotes}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">CGM Integration</span>
+                      <p className="mt-0.5 text-muted-foreground text-[13px]">{product.cgmIntegration}</p>
+                    </div>
+                    <div>
+                      <span className="font-medium text-xs uppercase text-muted-foreground">Warranty</span>
+                      <p className="mt-0.5 text-muted-foreground text-[13px]">{product.warrantyYears} years</p>
+                    </div>
+                    {product.features.length > 0 && (
+                      <div>
+                        <span className="font-medium text-xs uppercase text-muted-foreground">Features</span>
+                        <ul className="mt-1 space-y-0.5">
+                          {product.features.slice(0, 5).map((f, i) => (
+                            <li key={i} className="text-[13px] text-muted-foreground flex items-start gap-1.5">
+                              <span className="text-primary mt-1">•</span>
+                              <span>{f}</span>
+                            </li>
+                          ))}
+                          {product.features.length > 5 && (
+                            <li className="text-[12px] text-muted-foreground/60">+{product.features.length - 5} more</li>
+                          )}
+                        </ul>
+                      </div>
+                    )}
+                    {product.sourceUrls.length > 0 && (
+                      <div>
+                        <span className="font-medium text-xs uppercase text-muted-foreground">Sources</span>
+                        <div className="flex flex-col gap-0.5 mt-1">
+                          {product.sourceUrls.map((url, i) => (
+                            <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline">
+                              <ExternalLink className="size-3 shrink-0" />
+                              {new URL(url).hostname.replace("www.", "")}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </CollapsibleContent>
+            </Card>
+          </Collapsible>
+        ))}
+        {filtered.length === 0 && (
+          <Card>
+            <CardContent className="text-center py-8 text-muted-foreground">
+              No pumps match your filters.
+            </CardContent>
+          </Card>
+        )}
+      </div>
 
       <p className="text-xs text-muted-foreground">
         Showing {filtered.length} of {data.pumpProducts.length} pumps · Click a row to expand details
