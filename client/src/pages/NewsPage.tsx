@@ -24,8 +24,10 @@ export default function NewsPage() {
   const categories = ["all", "pricing", "devices", "coverage", "legislation", "research"];
 
   const filteredNews = useMemo(() => {
-    if (categoryFilter === "all") return data.recentNews;
-    return data.recentNews.filter((n) => n.category === categoryFilter);
+    const items = categoryFilter === "all"
+      ? data.recentNews
+      : data.recentNews.filter((n) => n.category === categoryFilter);
+    return [...items].sort((a, b) => b.date.localeCompare(a.date));
   }, [categoryFilter]);
 
   const groupedSources = useMemo(() => {

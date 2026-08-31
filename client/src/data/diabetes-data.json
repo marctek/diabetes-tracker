@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "June 2026",
+  "lastUpdated": "September 2026",
   "insulinProducts": [
     {
       "id": "ins-1",
@@ -12,9 +12,9 @@
         "pen",
         "cartridge"
       ],
-      "retailPriceVial": "~$66-$86 (10 mL, U-100; list price ~$66/vial after 70% cut in Q4 2023)",
+      "retailPriceVial": "~$42-$43 (10 mL, U-100; GoodRx retail $42.40 as of August 2026)",
       "retailPricePen": "$274.20 (5x3mL KwikPen carton retail); ~$92 per 5-pack after 2023 list price cut",
-      "retailNotes": "Lilly cut Humalog list price by 70% in Q4 2023. Vials ~$66-$86. GoodRx price as low as $34.11/vial. Also available as U-200 KwikPen (70% WAC cut effective Feb 1, 2026). Also available as Humalog Mix 75/25 and 50/50.",
+      "retailNotes": "Lilly cut Humalog list price by 70% in Q4 2023. Vials now ~$42-$43 retail (GoodRx $38.84 with coupon). Also available as U-200 KwikPen (70% WAC cut effective Feb 1, 2026). Also available as Humalog Mix 75/25 and 50/50.",
       "insuranceCopay": "$35/month (auto-applied at most retail pharmacies for commercially insured)",
       "insuranceTier": "Formulary tier varies by plan; typically Tier 2-3",
       "insuranceNotes": "Eli Lilly automatically caps out-of-pocket at $35/month for commercially insured patients at participating pharmacies. Savings card available for non-participating pharmacies.",
@@ -69,9 +69,9 @@
         "pen",
         "cartridge"
       ],
-      "retailPriceVial": "$72-$108 (10 mL vial; list price $72/vial after 75% cut effective Jan 1, 2024; GoodRx retail ~$108)",
-      "retailPricePen": "$140-$268 (5x3mL FlexPen or FlexTouch carton; list price ~$140; GoodRx retail ~$268)",
-      "retailNotes": "Novo Nordisk cut NovoLog list price 75% effective Jan 1, 2024 (vials to $72, pens to $140). NOTE: Novo Nordisk discontinued NovoLog 10mL vials, PenFill cartridges, and FlexPens as of December 31, 2025. Only NovoLog FlexTouch pens remain available as of early 2026. Some supply disruptions reported. Authorized generic (unbranded insulin aspart) also discontinued Dec 31, 2025.",
+      "retailPriceVial": "$72-$97 (10 mL vial; list price $72/vial after 75% cut effective Jan 1, 2024; GoodRx coupon ~$75-$84)",
+      "retailPricePen": "$140-$400+ (5x3mL FlexTouch carton; list price ~$140; retail varies widely by pharmacy)",
+      "retailNotes": "Novo Nordisk cut NovoLog list price 75% effective Jan 1, 2024 (vials to $72, pens to $140). NOTE: Novo Nordisk discontinued NovoLog 10mL vials, PenFill cartridges, and FlexPens as of December 31, 2025. Only NovoLog FlexTouch pens remain available as of 2026. Retail pen prices vary widely ($140-$400+) depending on pharmacy. Generic insulin aspart available from ~$73-$79 with GoodRx. Authorized generic (unbranded insulin aspart) discontinued Dec 31, 2025.",
       "insuranceCopay": "$35/month via MyInsulinRx savings program",
       "insuranceTier": "Typically Tier 2",
       "insuranceNotes": "Novo Nordisk MyInsulinRx program caps cost at $35/month for up to 3 vials or 2 packs of pens for commercially insured and uninsured patients.",
@@ -472,8 +472,8 @@
         "pen"
       ],
       "retailPriceVial": "N/A (pen only)",
-      "retailPricePen": "$512.69 (3x1.5mL SoloStar carton retail; GoodRx ~$367). Max SoloStar (2x3mL): ~$857 retail; GoodRx ~$728",
-      "retailNotes": "Ultra-concentrated insulin glargine (3x concentration of Lantus). SoloStar pen (3x1.5mL) and Max SoloStar (2x3mL) formulations. Available as unbranded insulin glargine 300 U/mL through Sanofi programs. Despite high retail price, Sanofi Valyou caps at $35/month.",
+      "retailPricePen": "$206.00 (3x1.5mL SoloStar carton retail; GoodRx ~$38.69). Max SoloStar (2x3mL): price varies",
+      "retailNotes": "Ultra-concentrated insulin glargine (3x concentration of Lantus). SoloStar pen (3x1.5mL) and Max SoloStar (2x3mL) formulations. Retail price dropped significantly to ~$206 for 3-pack as of August 2026 (GoodRx coupon ~$38.69). Sanofi Valyou caps at $35/month.",
       "insuranceCopay": "$35/month via Sanofi Valyou Savings Program",
       "insuranceTier": "Typically Tier 2-3",
       "insuranceNotes": "Covered under Sanofi's $35/month programs effective Jan 1, 2026.",
@@ -553,7 +553,7 @@
         "vial",
         "pen"
       ],
-      "retailPriceVial": "$175.27 (10 mL vial retail as of early 2026; GoodRx ~$121) \u2014 DISCONTINUING",
+      "retailPriceVial": "$444.99 (10 mL vial retail as of August 2026; GoodRx ~$122.10) \u2014 DISCONTINUING",
       "retailPricePen": "$391.71 (5x3mL FlexTouch carton retail; GoodRx ~$168) \u2014 DISCONTINUING",
       "retailNotes": "IMPORTANT: Levemir is being permanently discontinued globally. FlexPen discontinued April 1, 2024. Vials discontinued December 31, 2024 in the US. Remaining supplies being depleted through 2026. Prices reflect remaining inventory. No biosimilar available. Patients should switch to alternatives (Tresiba, Lantus, Basaglar, Semglee, Toujeo).",
       "insuranceCopay": "N/A (being discontinued)",
@@ -607,7 +607,7 @@
         "vial",
         "pen"
       ],
-      "retailPriceVial": "$84.33 (10 mL vial retail; GoodRx ~$74)",
+      "retailPriceVial": "$120.20 (10 mL vial retail; GoodRx ~$74.43)",
       "retailPricePen": "$133.18 (5x3mL prefilled pen carton retail; GoodRx ~$58)",
       "retailNotes": "First FDA-approved interchangeable biosimilar insulin (July 2021). Interchangeable with Lantus \u2014 pharmacist can substitute without new prescription. Competitively priced vs. Lantus. Also the underlying product for California's CalRx biosimilar insulin program.",
       "insuranceCopay": "Varies by plan; often lowest-tier biosimilar",
@@ -661,7 +661,7 @@
       ],
       "retailPriceVial": "N/A",
       "retailPricePen": "$55 maximum per 5-pack of 3mL pens ($11/pen) \u2014 California only, available January 1, 2026",
-      "retailNotes": "California state program (CalRx). Available to all Californians regardless of insurance status. Sold to pharmacies at $45/5-pack. Interchangeable with Lantus. State's SB 40 also caps commercial insurance insulin cost-sharing at $35/month for large group plans (Jan 1, 2026) and small group plans (Jan 1, 2027).",
+      "retailNotes": "California state program (CalRx). Available to all Californians regardless of insurance status. Sold to pharmacies at $45/5-pack. Interchangeable with Lantus. By mid-August 2026 the state reported distributing more than 120,000 five-pen packs since the January 1, 2026 launch. State's SB 40 also caps commercial insurance insulin cost-sharing at $35/month for large group plans (Jan 1, 2026) and small group plans (Jan 1, 2027). Civica Rx continues work on a CalRx rapid-acting insulin.",
       "insuranceCopay": "Not applicable \u2014 direct cash purchase at $55/5-pack regardless of insurance",
       "insuranceTier": "N/A (state-funded direct program)",
       "insuranceNotes": "Available directly at California pharmacies to all residents at \u2264$55/5-pack.",
@@ -700,6 +700,60 @@
         "https://www.singlecare.com/blog/insulin-prices/",
         "https://www.novocare.com/diabetes/help-with-costs/help-with-insulin-costs.html",
         "https://www.medicareresources.org/blog/how-the-inflation-reduction-act-has-improved-medicare-part-d-prescription-drug-coverage/"
+      ]
+    },
+    {
+      "id": "ins-27",
+      "brandName": "Awiqli",
+      "genericName": "insulin icodec-abae (U-700, once-weekly basal)",
+      "manufacturer": "Novo Nordisk",
+      "type": "long-acting",
+      "forms": [
+        "pen"
+      ],
+      "retailPriceVial": "N/A (pen only)",
+      "retailPricePen": "$99 list price per package (FlexTouch U-700 pen); $35/month with Medicare or commercial insurance and $55/month if uninsured via the NovoCare savings program",
+      "retailNotes": "First and only once-weekly basal insulin in the US. FDA-approved March 26, 2026; launched nationwide August 11, 2026 at more than 70,000 pharmacies. Formulated at 700 units/mL (U-700) — seven times more concentrated than standard U-100 basal insulins — and dosed once weekly on the same calendar day using the Awiqli FlexTouch pen. Reduces basal injections from 7 per week to 1. Approval was based on the ONWARDS phase 3a program. Note: Novo Nordisk failed to win FDA approval for icodec on its first attempt in July 2024; the 2026 approval followed additional review.",
+      "insuranceCopay": "$35/month via NovoCare savings program for commercially insured patients",
+      "insuranceTier": "Emerging on formularies; coverage varies by plan",
+      "insuranceNotes": "NovoCare caps out-of-pocket at $35/month for commercial or Medicare patients. Formulary placement is still developing as the product builds market presence.",
+      "medicareCovered": true,
+      "medicareCopay": "$35/month (IRA cap, if covered on plan formulary)",
+      "medicareNotes": "Medicare Part D coverage depends on plan formulary. $35/month cap applies if covered.",
+      "ira35Cap": true,
+      "patientAssistance": "NovoCare savings program: $35/month for commercially insured or Medicare patients, $55/month if uninsured. Novo Nordisk Patient Assistance Program (PAP): free insulin for qualifying uninsured/Medicare patients. Call NovoCare: (866) 310-7549.",
+      "sourceUrls": [
+        "https://www.prnewswire.com/news-releases/novo-nordisks-awiqli-the-first-once-weekly-basal-insulin-for-adults-with-type-2-diabetes-now-available-in-the-us-302847645.html",
+        "https://www.hcplive.com/view/fda-approves-awiqli-insulin-icodec-first-once-weekly-basal-insulin-for-type-2-diabetes",
+        "https://diatribe.org/diabetes-medications/fda-approves-once-weekly-basal-insulin-awiqli-type-2",
+        "https://www.goodrx.com/awiqli"
+      ]
+    },
+    {
+      "id": "ins-28",
+      "brandName": "Garzulys",
+      "genericName": "insulin aspart-fsan",
+      "manufacturer": "Meitheal Pharmaceuticals (U.S. commercialization; licensed from Emerge)",
+      "type": "rapid-acting",
+      "forms": [
+        "vial",
+        "pen"
+      ],
+      "retailPriceVial": "Pricing not yet published (launch pending as of September 2026)",
+      "retailPricePen": "Pricing not yet published (launch pending as of September 2026)",
+      "retailNotes": "FDA approved July 30, 2026. Rapid-acting biosimilar to NovoLog (insulin aspart) — the third insulin aspart biosimilar cleared in the US, after Kirsty (insulin aspart-xjhz) and Merilog (insulin aspart-szjj). Supplied as a 3 mL single-patient-use prefilled pen and a 10 mL multiple-dose vial. Meitheal is the U.S. Regulatory Agent and holds exclusive U.S. commercialization rights under a license from Emerge. Launch timing and list price not disclosed at approval.",
+      "insuranceCopay": "Not yet established; biosimilar may be preferred on some formularies",
+      "insuranceTier": "Biosimilar tier; pricing and formulary placement developing",
+      "insuranceNotes": "As a biosimilar to NovoLog, may be positioned as a lower-cost formulary option once launched.",
+      "medicareCovered": true,
+      "medicareCopay": "$35/month (IRA cap, if covered on plan formulary)",
+      "medicareNotes": "Medicare Part D coverage will depend on plan formulary once the product launches. $35/month cap applies if covered.",
+      "ira35Cap": true,
+      "patientAssistance": "Meitheal Pharmaceuticals patient assistance details not yet announced. Check meithealpharma.com for current programs.",
+      "sourceUrls": [
+        "https://www.drugs.com/newdrugs/fda-approves-garzulys-insulin-aspart-fsan-biosimilar-novolog-6851.html",
+        "https://www.biospace.com/press-releases/meitheal-pharmaceuticals-announces-fda-approval-of-garzulys-insulin-aspart-fsan-injection",
+        "https://www.renalandurologynews.com/news/fda-approves-garzulys-insulin-aspart-fsan-biosimilar-novolog/"
       ]
     }
   ],
@@ -809,7 +863,7 @@
       "id": "cgm-4",
       "name": "Dexcom Stelo",
       "manufacturer": "Dexcom",
-      "sensorCostPerUnit": "$55 retail per sensor (single sensor, 15-day supply); $99 for 2-pack (one-time purchase)",
+      "sensorCostPerUnit": "$99 one-time purchase (1-month supply); $89/month subscription (save 10%); $84/month on 3-month subscription",
       "monthlyCostNoInsurance": "$89/month (subscription) or $99/month (one-time). FSA/HSA eligible.",
       "transmitterCost": "Included in sensor (integrated)",
       "readerCost": "N/A \u2014 smartphone app only (no separate reader sold)",
@@ -845,7 +899,7 @@
       "id": "cgm-5",
       "name": "FreeStyle Libre 3 Plus",
       "manufacturer": "Abbott",
-      "sensorCostPerUnit": "~$101\u2013$117 retail per sensor (sold as 2-pack = ~$202\u2013$235 retail per 28-day supply)",
+      "sensorCostPerUnit": "~$93 retail per sensor (sold as 2-pack = ~$186 retail per 28-day supply; GoodRx ~$169.20 for 2-pack)",
       "monthlyCostNoInsurance": "~$202\u2013$235/month at retail; ~$155/month with GoodRx. Annual full retail: ~$3,000\u2013$3,100.",
       "transmitterCost": "Included in sensor (all-in-one, no separate transmitter)",
       "readerCost": "$84.06 retail for FreeStyle Libre 3 reader; ~$78.67 GoodRx (optional \u2014 sensor primarily used with smartphone)",
@@ -915,7 +969,7 @@
       "id": "cgm-7",
       "name": "FreeStyle Libre 2 (original)",
       "manufacturer": "Abbott",
-      "sensorCostPerUnit": "~$88\u2013$176 retail (sold as 2-pack = ~$176 retail per 28-day supply); ~$165 with GoodRx",
+      "sensorCostPerUnit": "~$138 retail per sensor (sold as 2-pack = ~$276 retail per 28-day supply); GoodRx ~$169.20 for 2-pack",
       "monthlyCostNoInsurance": "~$176/month at retail (2 sensors/28 days); ~$165 with GoodRx.",
       "transmitterCost": "Included (all-in-one)",
       "readerCost": "$84.05 retail; ~$78.67 GoodRx (optional)",
@@ -1395,7 +1449,7 @@
       "firstYearCostNoInsurance": "$4,500\u2013$9,840",
       "insurancePumpCopay": "$0 (no separate pump purchase)",
       "insuranceMonthlyCopay": "$0\u2013$50",
-      "insuranceNotes": "Omnipod 5 covered under pharmacy benefit by most major commercial plans (Walmart, Walgreens, CVS, Amazon). Majority of commercially insured users pay <$30/month; more than 40% pay $0. Insulet offers a free trial (limited supply) for commercially insured patients. No prior long-term DME contract required. Prior authorization typically required. Insurance covered under pharmacy benefit\u2014not DME\u2014for most commercial plans, meaning different cost-sharing rules apply.",
+      "insuranceNotes": "Omnipod 5 covered under pharmacy benefit by most major commercial plans (Walmart, Walgreens, CVS, Amazon). Majority of commercially insured users pay <$30/month; more than 40% pay $0. Insulet offers a free trial (limited supply) for commercially insured patients. No prior long-term DME contract required. Prior authorization typically required. Insurance covered under pharmacy benefit\u2014not DME\u2014for most commercial plans, meaning different cost-sharing rules apply. Insulet is pre-positioning FreeStyle Libre 3 Plus-compatible Pods in US retail channels; users receive over-the-air updates as compatible Pods reach their pharmacy.",
       "medicareCovered": true,
       "medicarePumpCost": "N/A (pharmacy benefit, no upfront pump cost)",
       "medicareMonthlySupply": "$0\u2013$35/month (pods covered under Medicare Part D pharmacy benefit; insulin capped at $35/month under Part D)",
@@ -1406,8 +1460,8 @@
       "cgmIntegration": [
         "Dexcom G6",
         "Dexcom G7",
-        "FreeStyle Libre 2 Plus (expected 2026)",
-        "FreeStyle Libre 3 Plus (expected 2026)"
+        "FreeStyle Libre 2 Plus",
+        "FreeStyle Libre 3 Plus (US integration live June 2026)"
       ],
       "features": [
         "Only FDA-cleared tubeless AID system in US market",
@@ -1418,8 +1472,9 @@
         "Available at retail pharmacies (Walmart, CVS, Walgreens, Amazon)",
         "No long-term commitment (pay-as-you-go through pharmacy)",
         "FDA-approved: Type 1 (ages 2+) and Type 2 (ages 18+)",
-        "SmartAdjust 2.0 expected 2026 (improved algorithm, lower 100 mg/dL target)",
-        "Omnipod 6 next generation expected 2027",
+        "Enhanced algorithm rolled out in the US June 2026: adds a 100 mg/dL Target Glucose option (six targets, 100\u2013150 mg/dL) and keeps users in Automated Mode with fewer interruptions during prolonged highs",
+        "FreeStyle Libre 3 Plus integration now available in the US (over-the-air Pod software updates; caregiver monitoring via Abbott LibreLinkUp)",
+        "Omnipod 6 next generation expected 2027 (EVOLUTION fully closed-loop T2D program)",
         "Omnipod Promise: upgrade to next-gen at no additional cost (insured)"
       ],
       "sourceUrls": [
@@ -1427,7 +1482,8 @@
         "https://www.goodrx.com/omnipod-5",
         "https://www.singlecare.com/blog/omnipod-without-insurance/",
         "https://www.medicare.gov/publications/12172-3-things-to-know-about-medicare-insulin-costs.pdf",
-        "https://www.omnipod.com/current-podders/resources/omnipod-5/faqs/availability-access"
+        "https://www.omnipod.com/current-podders/resources/omnipod-5/faqs/availability-access",
+        "https://investor.insulet.com/news/news-details/2026/Insulet-Announces-U-S--Rollout-of-Enhanced-Omnipod-5-Algorithm-and-Expands-Compatibility-with-Abbotts-FreeStyle-Libre-3-Plus-Sensor/default.aspx"
       ]
     },
     {
@@ -1547,7 +1603,7 @@
       "firstYearCostNoInsurance": "~$1,024 + monthly refill costs (not publicly disclosed)",
       "insurancePumpCopay": "$0 first month",
       "insuranceMonthlyCopay": "$0\u2013$50/month",
-      "insuranceNotes": "Most commercially insured patients pay $0 for the first month and no more than $50/month for Refill Kits. Covered under pharmacy benefit. No long-term contract. Users with an existing in-warranty pump can switch to twiist without waiting for warranty expiration. Broad national availability as of June 2026.",
+      "insuranceNotes": "Most commercially insured patients pay $0 for the first month and no more than $50/month for Refill Kits. Covered under pharmacy benefit. No long-term contract. Users with an existing in-warranty pump can switch to twiist without waiting for warranty expiration. Sequel completed its full US commercial launch in July 2026.",
       "medicareCovered": "Partial/In Progress",
       "medicarePumpCost": "TBD",
       "medicareMonthlySupply": "TBD",
@@ -1557,7 +1613,9 @@
       "tubeless": false,
       "cgmIntegration": [
         "Dexcom G6",
-        "Dexcom G7"
+        "Dexcom G7",
+        "FreeStyle Libre 3 Plus",
+        "Eversense 365 (added 2026)"
       ],
       "features": [
         "First commercially available Tidepool Loop-powered AID system",
@@ -1565,10 +1623,12 @@
         "iPhone-only control (no dedicated pump screen)",
         "Precise micro-dosing using DEKA pump hardware",
         "Highly customizable algorithm (personalized targets, exercise modes)",
+        "Optional Diabeloop DBLG2 algorithm (2026): user enters only body weight and total daily insulin",
         "300-unit cassette capacity",
         "Ages 6+ with Type 1 diabetes",
         "No contract lock-in\u2014users can switch without warranty penalty",
-        "Nationally available as of June 2026",
+        "Full US commercial launch completed July 2026",
+        "ADA 2026 data showed HbA1c and time-in-range gains with zero severe hypoglycemia over 13 weeks in Type 2 diabetes",
         "$0 first month / \u2264$50/month with commercial insurance"
       ],
       "sourceUrls": [
@@ -1611,6 +1671,43 @@
       "sourceUrls": [
         "https://www.bigfootbiomedical.com/about/press-releases/abbott_acquisition.html",
         "https://www.drugdeliverybusiness.com/abbott-acquisition-bigfoot-biomedical-9-months-later/"
+      ]
+    },
+    {
+      "id": "pump-11",
+      "name": "MiniMed Flex",
+      "manufacturer": "MiniMed (Medtronic diabetes spinoff)",
+      "pumpCost": "Not separately published at launch; sold via MiniMed flex payment plan (includes ~$6/month service fee)",
+      "monthlySupplyCost": "$150–$350 (infusion sets, reservoirs, sensors)",
+      "firstYearCostNoInsurance": "Not yet publicly disclosed",
+      "insurancePumpCopay": "$0–$2,500 (DME coinsurance, varies by plan)",
+      "insuranceMonthlyCopay": "$0–$100; MiniMed states final cost may exceed $50/month depending on insurance",
+      "insuranceNotes": "FDA cleared March 18, 2026; first US commercial launch June 17, 2026. Covered as DME under most commercial plans, similar to the MiniMed 780G. Launches with the Simplera Sync sensor; pairing with the Instinct sensor (made by Abbott) follows later in summer 2026. Prior authorization typically required.",
+      "medicareCovered": true,
+      "medicarePumpCost": "$500–$1,500 upfront (20% coinsurance)",
+      "medicareMonthlySupply": "$30–$60/month supplies (20% coinsurance); insulin capped at $35/month",
+      "medicareNotes": "Expected to follow the same Medicare Part B DME pathway as the MiniMed 780G (capped rental, then ownership transfer). Medtronic announced expanded Medicare access for its full insulin-delivery portfolio in February 2026.",
+      "warrantyYears": 4,
+      "closedLoop": true,
+      "tubeless": false,
+      "cgmIntegration": [
+        "Simplera Sync sensor (Medtronic)",
+        "Instinct sensor (Abbott, rolling out summer 2026)"
+      ],
+      "features": [
+        "MiniMed's smallest insulin pump — roughly the size of two stacked insulin vials, about half the size of the 780G",
+        "First MiniMed pump with no screen — fully controlled through a companion iOS or Android app",
+        "Over-the-air software updates via the phone app",
+        "300-unit insulin reservoir",
+        "Powered by MiniMed's most advanced SmartGuard algorithm with Meal Detection technology (auto-corrections every 5 minutes)",
+        "FDA-cleared for Type 1 diabetes ages 7+ and insulin-requiring Type 2 diabetes ages 18+",
+        "Limited US rollout began June 2026; broader availability through summer 2026"
+      ],
+      "sourceUrls": [
+        "https://news.minimed.com/2026-06-17-MiniMeds-Smallest-App-Controlled-Insulin-Pump-is-Now-Available-in-the-U-S",
+        "https://news.minimed.com/2026-03-18-MiniMed-Announces-FDA-Clearance-of-MiniMed-Flex-TM-,-the-Companys-Smallest-Insulin-Pump-Featuring-Its-First-Smartphone-Controlled-Design",
+        "https://www.drugdeliverybusiness.com/minimed-begins-flex-pump-rollout-us/",
+        "https://www.hmenews.com/article/minimed-launches-flex-insulin-pump-in-us"
       ]
     }
   ],
@@ -1667,7 +1764,7 @@
       "name": "Sanofi Diabetes & T1D Pipeline",
       "category": "pharma",
       "url": "https://www.sanofi.com/en/media-room/press-releases",
-      "description": "Sanofi is the maker of Tzield (teplizumab), the first FDA-approved disease-modifying therapy to delay T1D progression. The company is pursuing regulatory expansion of Tzield to stage 3 T1D and to younger children (PETITE-T1D), and has partnered with EVOQ Therapeutics on NanoDisc immune tolerance technology."
+      "description": "Sanofi is the maker of Tzield (teplizumab), the first FDA-approved disease-modifying therapy for T1D. In 2026 the FDA expanded Tzield twice: on April 22 to delay stage 3 onset in stage 2 patients as young as age 1, and on June 12 (accelerated approval) to slow the loss of insulin production in patients ages 8–17 recently diagnosed with stage 3 T1D — the first therapy beyond insulin itself for the newly insulin-dependent. Sanofi also partners with EVOQ Therapeutics on NanoDisc immune-tolerance technology and makes the Apidra, Lantus, Toujeo, Admelog, and Merilog insulins."
     },
     {
       "name": "Dexcom Continuous Glucose Monitoring",
@@ -1872,6 +1969,110 @@
       "date": "2026-02-02",
       "category": "pricing",
       "summary": "Wall Street analysts cut GLP-1 obesity drug peak market forecasts by ~30%, from $150B to approximately $100B by 2030, amid accelerating price declines, compounded drug competition, and generic semaglutide entry in several markets. Eli Lilly (Mounjaro/Zepbound) dramatically outperformed Novo Nordisk (Ozempic/Wegovy) in 2025-2026 guidance, projecting $80-83B in 2026 revenue vs. Novo's expected 5-13% sales decline. Lilly's tirzepatide is rated 'superior' to semaglutide in head-to-head trials. Novo's oral Wegovy is the first GLP-1 pill on the market, achieving 50,000 weekly prescriptions within 3 weeks of launch."
+    },
+    {
+      "title": "Abbott Secures CE Mark for World's First Dual Glucose-Ketone CGM (Libre Duo)",
+      "source": "Abbott Mediaroom",
+      "url": "https://abbott.mediaroom.com/2026-05-27-Abbott-secures-CE-Mark-for-worlds-first-dual-glucose-ketone-sensing-technology-for-people-with-diabetes",
+      "date": "2026-05-27",
+      "category": "devices",
+      "summary": "Abbott received CE Mark approval for the Libre Duo and Libre Duo 10 Day — the world's first sensors to continuously track both glucose and ketones in a single wearable patch. A U.S. FDA submission has been filed with clearance expected in the second half of 2026. The dual-analyte capability addresses DKA, which causes 4x more hospitalizations than hypoglycemia."
+    },
+    {
+      "title": "Dexcom Reveals G8 CGM at Investor Day; Presents CONNECT Trial Data at ADA 2026",
+      "source": "Dexcom / PumpPeelz",
+      "url": "https://investors.dexcom.com/news/news-details/2026/Dexcom-Reaffirms-CGM-Benefits-for-All-People-With-Diabetes-and-Continues-Momentum-Toward-Earlier-Stage-Intervention-and-Preventative-Care-at-ADA-2026/default.aspx",
+      "date": "2026-06-01",
+      "category": "devices",
+      "summary": "Dexcom unveiled its next-generation G8 sensor at its 2026 Investor Day — described as a 15-day wear system and 'the most advanced wearable we've ever produced,' targeting FDA clearance and late-2027 launch. At ADA 2026, Dexcom presented CONNECT RCT results demonstrating CGM benefit for non-insulin-using patients, supporting broader coverage expansion."
+    },
+    {
+      "title": "ADA 2026 Scientific Sessions: Islet Cell Therapy Milestones and New AID System Data",
+      "source": "BreakthroughT1D / Drug Delivery Business",
+      "url": "https://www.breakthrought1d.org/news-and-updates/ada-2026-recap-days-1-and-2/",
+      "date": "2026-06-20",
+      "category": "research",
+      "summary": "The 85th ADA Scientific Sessions featured major cell therapy results — including Eledon's tegoprubart trial where all 12 islet transplant participants achieved insulin independence — alongside extensive closed-loop AID system data. Medtronic MiniMed, Tandem, and Beta Bionics previewed next-generation devices. Islet cell therapy and no-immunosuppression transplants dominated research headlines."
+    },
+    {
+      "title": "Tandem Files for Tubeless Mobi Patch Pump; Shifts to Pharmacy Pay-As-You-Go Model",
+      "source": "Drug Delivery Business",
+      "url": "https://www.drugdeliverybusiness.com/tandem-q1-2026-beats-reaffirms-guidance/",
+      "date": "2026-05-01",
+      "category": "devices",
+      "summary": "Tandem submitted a 510(k) for a tubeless version of its Mobi pump in Q2 2026. The company is simultaneously transitioning to a pharmacy-channel 'PAYGO' model — little/no upfront pump cost with ~$350/month in ongoing supply revenue — to expand patient access. The model mirrors Omnipod's pharmacy approach and could bring tubed AID to significantly more patients."
+    },
+    {
+      "title": "Medicare June 2026 CGM Coverage Update; Part B-to-Part D Shift Raises Access Concerns",
+      "source": "CMS / American Diabetes Association",
+      "url": "https://weence.com/diabetes-2/medicares-june-25-2026-update-for-implantable-cgm-coverage/",
+      "date": "2026-06-25",
+      "category": "coverage",
+      "summary": "CMS issued a CGM coverage update on June 25, 2026, including new provisions for implantable CGMs. The 2026 Home Health Final Rule shifted most Medicare CGM coverage from Part B DME billing to Part D pharmacy billing effective January 1, 2026, prompting an ADA statement expressing concern about potential access barriers for Medicare beneficiaries who previously had no cost-sharing under Part B."
+    },
+    {
+      "title": "Beta Bionics Previews Mint Patch Pump to Compete with Omnipod 5",
+      "source": "MedTech Dive",
+      "url": "https://www.medtechdive.com/news/beta-bionics-to-launch-its-first-insulin-patch-pump-to-compete-with-insulet/821091/",
+      "date": "2026-06-01",
+      "category": "devices",
+      "summary": "Beta Bionics — maker of the iLet Bionic Pancreas — announced its first insulin patch pump, the Mint, targeting a first-half 2027 launch. The Mint features a 200-unit reservoir, 3-day wear, and a hybrid reusable/disposable design, positioning it to compete directly with Insulet's Omnipod 5 in the growing tubeless AID segment."
+    },
+    {
+      "title": "Insulet Rolls Out Enhanced Omnipod 5 Algorithm and FreeStyle Libre 3 Plus Integration in the U.S.",
+      "source": "Insulet Corporation",
+      "url": "https://investor.insulet.com/news/news-details/2026/Insulet-Announces-U-S--Rollout-of-Enhanced-Omnipod-5-Algorithm-and-Expands-Compatibility-with-Abbotts-FreeStyle-Libre-3-Plus-Sensor/default.aspx",
+      "date": "2026-06-03",
+      "category": "devices",
+      "summary": "Insulet began the U.S. rollout of an enhanced Omnipod 5 algorithm that adds a 100 mg/dL Target Glucose option — giving providers six configurable targets from 100 to 150 mg/dL — and keeps users in Automated Mode with fewer interruptions during prolonged high-glucose events. At the same time, Omnipod 5 compatibility with Abbott's FreeStyle Libre 3 Plus sensor went live in the U.S., with caregiver remote monitoring through Abbott's LibreLinkUp app. Insulet is pre-positioning compatible Pods in retail pharmacies and pushing over-the-air software updates as they become available."
+    },
+    {
+      "title": "FDA Grants Accelerated Approval for Tzield (Teplizumab) in Stage 3 Type 1 Diabetes; Earlier 2026 Approval Extends Stage 2 Use to Age 1",
+      "source": "FDA / Sanofi",
+      "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-new-indication-tzield-teplizumab-certain-pediatric-patients-recently-diagnosed-stage-3",
+      "date": "2026-06-12",
+      "category": "research",
+      "summary": "The FDA granted accelerated approval on June 12, 2026 for Tzield (teplizumab-mzwv) to slow the decline of insulin production in patients ages 8 through 17 who were recently diagnosed with stage 3 (clinical) type 1 diabetes — the first disease-modifying option for patients who are already insulin-dependent, based on a statistically significant effect on C-peptide. This followed an April 22, 2026 approval expanding Tzield's stage 2 (delay-of-onset) indication down to age 1. Tzield was previously approved only to delay progression from stage 2 to stage 3 in patients 8 and older."
+    },
+    {
+      "title": "MiniMed Flex — Smallest, Screenless App-Controlled Insulin Pump — Launches in the U.S.",
+      "source": "MiniMed / Drug Delivery Business",
+      "url": "https://news.minimed.com/2026-06-17-MiniMeds-Smallest-App-Controlled-Insulin-Pump-is-Now-Available-in-the-U-S",
+      "date": "2026-06-17",
+      "category": "devices",
+      "summary": "MiniMed (Medtronic's diabetes spinoff) began the first U.S. commercial rollout of the MiniMed Flex, its smallest insulin pump and first with no screen — controlled entirely through an iOS or Android app with over-the-air updates. Roughly the size of two stacked insulin vials and about half the size of the 780G, Flex holds 300 units and runs MiniMed's most advanced SmartGuard algorithm with Meal Detection. It is cleared for type 1 diabetes ages 7+ and insulin-requiring type 2 ages 18+, launching with the Simplera Sync sensor; pairing with Abbott's Instinct sensor follows later in summer 2026. FDA clearance came March 18, 2026."
+    },
+    {
+      "title": "Medicare GLP-1 Bridge Launches — $50/Month Wegovy, Zepbound, and Foundayo for Eligible Part D Beneficiaries",
+      "source": "CMS / Medicare Rights Center / CNN",
+      "url": "https://www.medicarerights.org/medicare-watch/2026/06/04/glp-1-weight-loss-drug-demonstration-begins-july-2026",
+      "date": "2026-07-01",
+      "category": "coverage",
+      "summary": "The Medicare GLP-1 Bridge demonstration went live July 1, 2026, giving eligible Part D members access to Wegovy (injection or tablet), Zepbound KwikPen, or Foundayo (oral orforglipron) for a flat $50 copay per 30-day supply regardless of income — the first time Medicare has covered anti-obesity medications. The $50 payment does not count toward the deductible or the Part D out-of-pocket cap. The single-dose Zepbound pen and Zepbound vials are excluded. The Bridge runs through December 31, 2027, ahead of the broader BALANCE Model."
+    },
+    {
+      "title": "FDA Approves Garzulys (Insulin Aspart-fsan) — Third Rapid-Acting Insulin Aspart Biosimilar",
+      "source": "Meitheal Pharmaceuticals / Drugs.com",
+      "url": "https://www.drugs.com/newdrugs/fda-approves-garzulys-insulin-aspart-fsan-biosimilar-novolog-6851.html",
+      "date": "2026-07-30",
+      "category": "pricing",
+      "summary": "The FDA approved Garzulys (insulin aspart-fsan), a rapid-acting biosimilar to NovoLog, on July 30, 2026 — the third insulin aspart biosimilar cleared in the U.S. after Kirsty and Merilog. Chicago-based Meitheal Pharmaceuticals holds exclusive U.S. commercialization rights under a license from Emerge and will supply the product as a 3 mL prefilled pen and a 10 mL vial. Launch timing and list price were not disclosed at approval; additional biosimilar competition is expected to keep downward pressure on mealtime insulin prices."
+    },
+    {
+      "title": "Novo Nordisk Launches Awiqli — First Once-Weekly Basal Insulin — Nationwide in the U.S.",
+      "source": "Novo Nordisk / diaTribe",
+      "url": "https://www.prnewswire.com/news-releases/novo-nordisks-awiqli-the-first-once-weekly-basal-insulin-for-adults-with-type-2-diabetes-now-available-in-the-us-302847645.html",
+      "date": "2026-08-11",
+      "category": "pricing",
+      "summary": "Novo Nordisk began the nationwide U.S. launch of Awiqli (insulin icodec-abae) on August 11, 2026 — the first and only once-weekly basal insulin, approved for adults with type 2 diabetes and now stocked at more than 70,000 pharmacies. Dosed once weekly with a U-700 (700 units/mL) FlexTouch pen, it cuts basal injections from seven per week to one. List price is $99 per package; NovoCare caps out-of-pocket at $35/month for commercial or Medicare patients and $55/month for the uninsured. The FDA approved icodec on March 26, 2026 after rejecting an earlier filing in July 2024."
+    },
+    {
+      "title": "Sequel Med Tech Completes Full U.S. Launch of the twiist AID System; Adds Eversense 365 and Diabeloop Algorithm",
+      "source": "MassDevice / diaTribe",
+      "url": "https://www.massdevice.com/sequel-fully-launches-twiist-pump-us/",
+      "date": "2026-07-07",
+      "category": "devices",
+      "summary": "Sequel Med Tech completed the full U.S. commercial launch of twiist, the first Tidepool Loop-powered automated insulin delivery system, expanding beyond its 2025 limited release. The pharmacy-channel, pay-as-you-go pump ($0 first month, ≤$50/month with commercial insurance) now supports the Eversense 365 implantable CGM in addition to FreeStyle Libre 3 Plus, and offers an optional Diabeloop DBLG2 algorithm that needs only body weight and total daily insulin. At ADA 2026, Sequel reported HbA1c and time-in-range gains with zero severe hypoglycemia over 13 weeks in type 2 diabetes."
     }
   ],
   "regulatoryNotes": {
@@ -1881,7 +2082,7 @@
         "Applies to ALL Part D plans \u2014 mandatory, not optional (unlike the earlier Trump-era voluntary Senior Savings Model)",
         "Caps cost at $35/month per 30-day supply of EACH covered insulin product",
         "No deductible applies to insulin under Part D or Part B under IRA",
-        "Applies to all insulin types and dosage forms: vials, pens, inhalers, pump insulin",
+        "Applies to all insulin types and dosage forms: vials, pens, inhalers, pump insulin, and once-weekly basal insulin (Awiqli)",
         "Medicare Part D plans set their own formularies \u2014 they choose which insulins to cover, but whatever covered insulins cost \u2264$35/month",
         "If an insulin is NOT on your Part D formulary, you pay full price (not $35)",
         "Estimated 3.3+ million Medicare insulin users benefit from this cap",
