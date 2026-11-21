@@ -100,7 +100,7 @@ function AppSidebar() {
       </SidebarContent>
       <SidebarFooter className="px-3 pb-3">
         <div className="text-[11px] text-sidebar-foreground/40 leading-tight group-data-[collapsible=icon]:hidden">
-          Data current as of September 2026. Not medical advice.
+          Data current as of November 30, 2026. Not medical advice.
         </div>
       </SidebarFooter>
     </Sidebar>
